@@ -1,0 +1,72 @@
+title: Nimish Khattar
+author: Nimishk07
+email: nimishkhattar07@gmail.com
+description: > # this means to ignore newlines until "show_exerpts:"
+  || Competitive Programming || Problem solving  || Codeforces      ||<br>
+  || Software Developer      || Machine Learning || Cloud Computing ||<br>
+  || Engineer                ||<br>
+# baseurl: "Portfoio"
+# url: "https://Nimishkhattar"
+show_excerpts: false # set to true to show excerpts on the homepage
+
+paginate: 1
+paginate_path: "/blog/page:num/"
+
+tag_permalink_style: pretty
+tag_page_layout: tag_page
+tag_page_dir: tag
+collections:
+    projects:
+              output: true
+    blogposts:
+              output: true
+    posts:
+              output: true
+          
+# jekyll-dash date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+dash:
+  date_format: "%b %-d, %Y"
+
+  disqus:
+    shortname: NimishKhattar
+
+  # generate social links in footer
+  # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
+  social_links:
+    - url: https://twitter.com/KhattarNimish_
+      icon: twitter-square
+      color: cyan
+    - url: https://gmail.com
+      icon: google
+      color: red
+    - url: https://github.com/Nimishk07
+      icon: github-square
+      color: purple
+    - url: https://stackoverflow.com/users/13102926/nimish-khattar
+      icon: stack-overflow
+      color: orange
+    - url: https://www.linkedin.com/in/nimish-khattar-537217179/
+      icon: linkedin
+      color: blue
+
+
+  show_author: true
+
+  animation_speed: 50
+
+# Build settings
+theme: jekyll-dash
+
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag
+ - jekyll-paginate
+ - liquid-md5
+ - jekyll/tagging
+
+# Replaces the default avatar provider (gravatar)
+# avatar_source: github
+github_username: Nimishk07
+avatar_source: local
+avatar_path: /assets/avatar.png

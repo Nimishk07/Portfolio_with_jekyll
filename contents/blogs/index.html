@@ -1,0 +1,36 @@
+---
+layout: front_page
+title: Blogs
+---
+<div class="pagination">
+  
+    <!-- <a href="/contents/Resume/"><i class="fas fa-chevron-left"></i></a> -->
+      <a href="/">About</a>
+      <a href="/contents/projects/">Projects</a>
+      <a href="/contents/Resume/">Resume</a>
+      <span class="webjeda">Blogs</span>
+      <!-- <a href="/contents/extr/">Extra</a> -->
+    <!-- <a href="/contents/extr/"><i class="fas fa-chevron-right"></i></a> -->
+  
+</div>
+
+<div class="post-links">
+  {% for post in site.blogposts %}
+  <div class="post-link-wrapper">
+    <a href="{{ post.url | relative_url }}" class="post-link">{{ post.title }}</a>
+    <div class="post-meta">
+
+      {% if site.dash.date_format %}
+      {{ post.date | date: site.dash.date_format }}
+      {% else %}
+      {{ post.date | date: "%b %-d, %Y" }}
+      {% endif %}
+      {% if site.show_excerpts == true %}
+      <div class="post-excerpt">
+        {{ post.content | strip_html | truncatewords: 50 }}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>

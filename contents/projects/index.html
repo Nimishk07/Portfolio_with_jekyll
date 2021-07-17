@@ -1,0 +1,38 @@
+---
+layout: front_page
+title: Projects
+---
+<div class="pagination">
+  
+    <!-- <a href="/"><i class="fas fa-chevron-left"></i></a> -->
+      <a href="/">About</a>
+      <span/ class="webjeda">Projects</span>
+      <a href="/contents/Resume/">Resume</a>
+      <a href="/contents/blogs/">Blogs</a>
+      <!-- <a href="/contents/extr/">Extra</a> -->
+    <!-- <a href="/contents/Resume/"><i class="fas fa-chevron-right"></i></a> -->
+  
+</div>
+
+
+<div class="post-links">
+  {% for post in site.projects %}
+  <div class="post-link-wrapper">
+    <a href="{{ post.url | relative_url }}" class="post-link">{{ post.title }}</a>
+    <div class="post-meta">
+      {% if site.dash.date_format %}
+      {{ post.date | date: site.dash.date_format }}
+      {% else %}
+      {{ post.date | date: "%b %-d, %Y" }}
+      {% endif %}
+      {% if site.show_excerpts == true %}
+      <div class="post-excerpt">
+        {{ post.content | strip_html | truncatewords: 50 }}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+
